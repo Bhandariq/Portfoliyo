@@ -162,3 +162,48 @@ header {
     transform: translate(-50%, -50%);
 }
 
+/* ===== Responsive Design ===== */
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+  .nav-links {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  .nav-links li {
+    width: 100%;
+    text-align: left;
+  }
+  .container, .projects-section, .timeline {
+    width: 95%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+  .navbar {
+    padding: 8px 15px;
+  }
+}
