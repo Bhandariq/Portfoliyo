@@ -144,7 +144,7 @@ p {
 }
 .nav-links a {
   position: relative;
-  left: -60px; /* shifts each link 8px left */
+  left: -8px; /* shifts each link 8px left */
 }
 
 /* Logo */
