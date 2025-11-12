@@ -1,0 +1,371 @@
+/* ===== Font & Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0e1117;
+  color: #dcdcdc;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(20, 20, 20, 0.75);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 60px;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #00ffff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #dcdcdc;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #00ffff;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #00ffff;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* ===== Section ===== */
+.portfolio-section {
+  padding: 140px 80px 80px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 60px;
+}
+
+/* ===== Timeline ===== */
+.timeline {
+  position: relative;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: #00ffff;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+
+.timeline-item {
+  padding: 20px 40px;
+  position: relative;
+  width: 50%;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -13px;
+  background-color: #00ffff;
+  border: 3px solid #0e1117;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.right::after {
+  left: -13px;
+}
+
+.content {
+  background-color: #161b22;
+  padding: 25px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 255, 255, 0.2);
+}
+
+.content h2 {
+  color: #00ffff;
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.content .date {
+  display: block;
+  color: #999;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.content ul {
+  padding-left: 20px;
+}
+
+.content ul li {
+  margin-bottom: 8px;
+  color: #cfcfcf;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 30px 0;
+  background-color: #0e1117;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: #888;
+  font-size: 0.9rem;
+  margin-top: 60px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .timeline::after {
+    left: 31px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  .timeline-item::after {
+    left: 15px;
+  }
+
+  .right {
+    left: 0%;
+  }
+}
+/* ===== Falling Particles Effect ===== */
+.particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.particles span {
+  position: absolute;
+  display: block;
+  background: rgba(0, 255, 255, 0.9);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.5);
+  animation: fall linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
+
+
+  /* =========================================================
+   PROJECTS SECTION 
+   ========================================================= */
+
+.projects-section {
+  padding: 100px 10%;
+  background: #0e0e10;
+  color: #fff;
+  text-align: center;
+}
+
+.projects-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #00ffff;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+}
+
+.project-card h3 {
+  color: #00ffff;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 15px;
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.project-card a:hover {
+  border-color: #00ffff;
+}
+/* ===== Buttons (GitHub & Live Demo) ===== */
+.project-links {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.project-links .btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+}
+
+.github-btn {
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.github-btn:hover {
+  background: #171515;
+  color: #ffffff;
+  border-color: #171515;
+  transform: translateY(-3px);
+}
+
+.live-btn {
+  background: #00e0e0;
+  color: #0a0a0a;
+  border: 1px solid #00e0e0;
+}
+
+.live-btn:hover {
+  background: transparent;
+  color: #00e0e0;
+  border-color: #00e0e0;
+  transform: translateY(-3px);
+}
+.project-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.gradient-btn {
+  background: linear-gradient(90deg, #ff7a5c, #ffb17a);
+  color: white;
+  font-weight: 600;
+  padding: 10px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(255, 122, 92, 0.3);
+}
+
+.gradient-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 122, 92, 0.5);
+  background: linear-gradient(90deg, #ff906b, #ffc18a);
+}
+
+.gradient-btn i {
+  margin-right: 8px;
+}
+
+}

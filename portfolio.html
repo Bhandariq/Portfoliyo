@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Rohit Singh Bhandari</title>
+    <link rel="stylesheet" href="portfolio.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ===== Falling Particles ===== -->
+    <div class="particles">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- ===== Navbar ===== -->
+    <header class="navbar">
+      <div class="logo">Rohit.dev</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </header>
+
+    <!-- ===== Work Experience ===== -->
+    <section class="portfolio-section">
+      <h1 class="section-title">Work Experience</h1>
+      <div class="timeline">
+        <div class="timeline-item left">
+          <div class="content">
+            <h2>React.js Developer</h2>
+            <span class="date">Jan 2023 – Present</span>
+            <ul>
+              <li>
+                Developed and maintained responsive web apps using React.js and
+                modern UI libraries.
+              </li>
+              <li>
+                Collaborated with teams to deliver scalable and efficient
+                front-end solutions.
+              </li>
+              <li>
+                Implemented reusable components and optimized app performance.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item right">
+          <div class="content">
+            <h2>Backend Developer (Node.js)</h2>
+            <span class="date">Jan 2023 – Present</span>
+            <ul>
+              <li>
+                Designed and deployed RESTful APIs with Node.js, Express, and
+                MongoDB.
+              </li>
+              <li>Optimized API performance for high-traffic applications.</li>
+              <li>
+                Implemented authentication, authorization, and secure API
+                design.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item left">
+          <div class="content">
+            <h2>Database Developer (MongoDB)</h2>
+            <span class="date">Jan 2023 – Present</span>
+            <ul>
+              <li>
+                Created scalable database schemas using MongoDB and Mongoose
+                ORM.
+              </li>
+              <li>
+                Implemented indexing and aggregation pipelines for faster
+                queries.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item right">
+          <div class="content">
+            <h2>Full Stack Developer</h2>
+            <span class="date">2023 – Present</span>
+            <ul>
+              <li>
+                Integrated React.js frontends with Node.js backends to build
+                full-stack solutions.
+              </li>
+              <li>
+                Deployed and managed web apps on cloud platforms like Render and
+                Vercel.
+              </li>
+              <li>
+                Worked with Git, GitHub, and CI/CD pipelines for efficient
+                deployment.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Projects Section ===== -->
+    <section class="projects-section">
+      <h1 class="section-title">Featured Projects</h1>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-info">
+            <h2>SMS & Email Classifier</h2>
+            <p>
+              Machine learning web app that classifies messages as spam or ham
+              using Flask and Python.
+            </p>
+            <div class="tech-stack">
+              <span>Python</span><span>Flask</span><span>ML</span><span>HTML</span
+              ><span>CSS</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/Bhandariq/SMS-email-CLASSIFIER"
+                target="_blank"
+                class="gradient-btn"
+              >
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="#" target="_blank" class="gradient-btn">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-info">
+            <h2>Portfolio Website</h2>
+            <p>
+              Personal portfolio website showcasing projects and skills using
+              HTML, CSS, and JavaScript.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer>
+      <p>© 2025 Rohit Singh Bhandari | Designed with ❤️</p>
+    </footer>
+
+    <!-- ===== Particle Animation Script ===== -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const particles = document.querySelectorAll(".particles span");
+        particles.forEach((p) => {
+          const size = Math.random() * 6 + 2; // 2px–8px
+          const left = Math.random() * 100; // 0–100vw
+          const duration = Math.random() * 10 + 5; // 5–15s
+          const delay = Math.random() * 5; // random start delay
+          p.style.width = `${size}px`;
+          p.style.height = `${size}px`;
+          p.style.left = `${left}vw`;
+          p.style.animationDuration = `${duration}s`;
+          p.style.animationDelay = `${delay}s`;
+        });
+      });
+    </script>
+  </body>
+</html>
