@@ -9,24 +9,25 @@
 
 body {
   height: 100vh;
-  background: url("background.jpg") no-repeat center/cover; 
-  padding: 50px 5%; 
+  background: url("background.jpg") no-repeat center/cover;
+  padding: 50px 5%;
 }
+
 .container {
   position: relative;
   height: 100%;
   background: rgba(255, 255, 255, 0.1);
-  border: rgba(255, 255, 255, 0.2) solid 2px ;
+  border: rgba(255, 255, 255, 0.2) solid 2px;
   backdrop-filter: blur(5px);
   border-radius: 30px;
   transform: scale(0);
   animation: zoom-in 1s forwards;
-
 }
+
 @keyframes zoom-in {
-    100% {
-        transform: scale(1);
-    }
+  100% {
+    transform: scale(1);
+  }
 }
 
 header {
@@ -35,7 +36,6 @@ header {
   left: 0;
   width: 100%;
   padding: 25px 5%;
-  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -56,26 +56,26 @@ header {
   }
 }
 
-
 .logo {
   font-size: 25px;
   color: #fff;
   text-decoration: none;
   font-weight: 600;
 }
+
 .navbar a {
-    font-size: 18px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 35px;
-    border-bottom: 2px solid transparent;
-    transition: .5s;
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  border-bottom: 2px solid transparent;
+  transition: .5s;
 }
 
 .navbar a:hover,
 .navbar a.active {
-    border-color: #fff;
+  border-color: #fff;
 }
 
 .home {
@@ -89,20 +89,22 @@ header {
 }
 
 .home-detail h1 {
-    font-size: 55px;
-    line-height: 1;
+  font-size: 55px;
+  line-height: 1;
 }
+
 .home-detail h2 {
-    font-size: 32px;
+  font-size: 32px;
 }
+
 .home-detail p {
-    font-size: 18px;
-    margin: 15px 0 20px;
-    
+  font-size: 18px;
+  margin: 15px 0 20px;
 }
+
 .home-detail .download-social {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .btn {
@@ -117,98 +119,59 @@ header {
   font-weight: 600;
   transition: .5s;
 }
+
 .btn:hover {
-    background: transparent;
-    box-shadow: none;
-    color: #fff;
+  background: transparent;
+  box-shadow: none;
+  color: #fff;
 }
+
 .home-detail .social-icons {
-  margin-left: 20px;  
+  margin-left: 20px;
 }
+
 .home-detail .social-icons a {
-    display: inline-flex;
-    padding: 8px;
-    border: 2px solid #fff;
-    border-radius: 50%;
-    font-size: 20px;
-    color: #fff;
-    text-decoration: none;
-    margin: 0 8px;
-    transition: .5s;
+  display: inline-flex;
+  padding: 8px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 8px;
+  transition: .5s;
 }
+
 .home-detail .social-icons a:hover {
-    background: #fff;
-    box-shadow: 0 0 10px #fff;
-    color: #333;
+  background: #fff;
+  box-shadow: 0 0 10px #fff;
+  color: #333;
 }
- .img-box {
-    position: relative;
-    width: 28vw;
-    height: 28vw;
-    border: 2px solid #fff;
-    border-radius: 50%;
-    box-shadow: 0 0 20px #fff;
-    overflow: hidden;   
+
+.img-box {
+  position: relative;
+  width: 28vw;
+  height: 28vw;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #fff;
+  overflow: hidden;
 }
 
 .img-box img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 25vw;
-    height: 30vw;
-    object-fit: cover;
-    border-radius: 10%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 25vw;
+  height: 30vw;
+  object-fit: cover;
+  border-radius: 10%;
+  transform: translate(-50%, -50%);
 }
 
-/* ===== Responsive Design ===== */
+/* ===== Enhanced Responsive Design ===== */
 
-@media (max-width: 1024px) {
-  .navbar {
-    padding: 10px 20px;
-  }
-  .nav-links {
-    gap: 15px;
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .nav-links {
-    flex-direction: column;
-    width: 100%;
-    gap: 10px;
-  }
-  .nav-links li {
-    width: 100%;
-    text-align: left;
-  }
-  .container, .projects-section, .timeline {
-    width: 95%;
-    padding: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 2rem;
-  }
-  h2 {
-    font-size: 1.5rem;
-  }
-  p {
-    font-size: 0.9rem;
-  }
-  .navbar {
-    padding: 8px 15px;
-  }
-  /* ===== Enhanced Responsive Design ===== */
-
-/* For tablets and smaller laptops */
+/* Tablets and smaller laptops */
 @media (max-width: 992px) {
   .home {
     flex-direction: column;
@@ -239,14 +202,18 @@ header {
   }
 }
 
-/* For mobile screens */
+/* Mobile screens */
 @media (max-width: 600px) {
   body {
     padding: 20px 3%;
   }
 
+  .container {
+    padding: 15px;
+  }
+
   .home {
-    flex-direction: column-reverse; /* Image below text looks better */
+    flex-direction: column-reverse;
     gap: 25px;
     text-align: center;
   }
@@ -295,6 +262,4 @@ header {
     margin: 5px 0;
     font-size: 16px;
   }
-}
-
 }
